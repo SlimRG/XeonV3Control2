@@ -1,0 +1,12 @@
+{
+  "source": "TurboUnlock_Detector_v0.5 user-provided regression fixture corpus",
+  "family": "ser8989-turbohack",
+  "board_fixture": "jg_x99m_gaming_d4",
+  "stock_sha256": "431818200BCF0663E5E269410109FE0F039CE1E6A3FFE9B91F7AFA46D061BD16",
+  "unlock_sha256": "F4BBB4A7C1AA3EFBB6A7DF75610DD04CFD5306C25D299F67E7E7243243C14D74",
+  "expected_removed_sha256": "AD6C2EE18E538CCFDF8E302FB30CF203B3878CC902A0A1C8802E39C4A1600795",
+  "expected_target_guid": "e7df4cfa-9e2e-4232-b86c-c44467a4ab20",
+  "expected_target_ffs_offset": "0xBCF590",
+  "expected_target_ffs_size": "0xABA",
+  "warning": "Regression-only stock/unlock pair. Never use these bytes as a cross-flash baseline for another board."
+}

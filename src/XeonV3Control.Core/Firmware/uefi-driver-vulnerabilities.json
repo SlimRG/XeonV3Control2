@@ -1,0 +1,146 @@
+[
+  {
+    "FileGuid": "9bcedb6d-13ca-473e-b605-8a47688729fa",
+    "Sha256": "9c19c06003311c102b91353d1b88fe23c9d2bd89c57f80afcc82b5fab9c2eab6",
+    "Id": "CVE-2023-28058",
+    "Source": "https://www.binarly.io/advisories/brly-2022-156"
+  },
+  {
+    "FileGuid": "9bcedb6d-13ca-473e-b605-8a47688729fa",
+    "Sha256": "adc756cd7143c8c1ec9e1f776aa1c7cee49da09f6e02b5bc609bc6969d977dcb",
+    "Id": "CVE-2023-28058",
+    "Source": "https://www.binarly.io/advisories/brly-2022-156"
+  },
+  {
+    "FileGuid": "9bcedb6d-13ca-473e-b605-8a47688729fa",
+    "Sha256": "9c19c06003311c102b91353d1b88fe23c9d2bd89c57f80afcc82b5fab9c2eab6",
+    "Id": "CVE-2023-28050",
+    "Source": "https://www.binarly.io/advisories/brly-2022-155"
+  },
+  {
+    "FileGuid": "9bcedb6d-13ca-473e-b605-8a47688729fa",
+    "Sha256": "adc756cd7143c8c1ec9e1f776aa1c7cee49da09f6e02b5bc609bc6969d977dcb",
+    "Id": "CVE-2023-28050",
+    "Source": "https://www.binarly.io/advisories/brly-2022-155"
+  },
+  {
+    "FileGuid": "9bcedb6d-13ca-473e-b605-8a47688729fa",
+    "Sha256": "e0c5654ae009fe58b2a6ab2d68c9ee3a37c65e81e5c5f7fa3236ee5dacccef97",
+    "Id": "CVE-2023-25936",
+    "Source": "https://www.binarly.io/advisories/brly-2022-169"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "242a5ea5ff855aed77a41207d3f43546b13a32bb5ceab4e333e7b5f0958afb8a",
+    "Id": "CVE-2023-25937",
+    "Source": "https://www.binarly.io/advisories/brly-2022-101"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "3194dcc56c37ac93cedb90571bfbc492f1b5e814bf887c59b3cd7e67087bf752",
+    "Id": "CVE-2023-25937",
+    "Source": "https://www.binarly.io/advisories/brly-2022-101"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "366d49466dc5f81aca0846a6bfa64c08efa719349caca0b560787b72ea4fc3d7",
+    "Id": "CVE-2023-25937",
+    "Source": "https://www.binarly.io/advisories/brly-2022-101"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "5811b4bdbf93b2b7fc95200f1f246827f5f366d07d16f06b863920d0b11bf388",
+    "Id": "CVE-2023-25937",
+    "Source": "https://www.binarly.io/advisories/brly-2022-101"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "7b19487c2b25cda388d8960ea34041513b3c7726e2a0a6010f9a08969ed58a38",
+    "Id": "CVE-2023-25937",
+    "Source": "https://www.binarly.io/advisories/brly-2022-101"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "d692fb75c9ba1779498fa6dd6f9e9463e8a590fb97dc2166f4d41d944b068085",
+    "Id": "CVE-2023-25937",
+    "Source": "https://www.binarly.io/advisories/brly-2022-101"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "d890373a028f4a868eff029342db3bd326dd23d9075c1c1101a41026ff6b8e07",
+    "Id": "CVE-2023-25937",
+    "Source": "https://www.binarly.io/advisories/brly-2022-101"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "53c72f110491b5bee302e898da8f9497d8e15ad037590c31fa4d709169158773",
+    "Id": "CVE-2023-28031",
+    "Source": "https://www.binarly.io/advisories/brly-2022-123"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "53c72f110491b5bee302e898da8f9497d8e15ad037590c31fa4d709169158773",
+    "Id": "CVE-2023-28032",
+    "Source": "https://www.binarly.io/advisories/brly-2022-124"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "99e00b3febba1763a7ff3f1eb043872506a00032ea2166b3611c041f8e56a3bb",
+    "Id": "CVE-2023-28031",
+    "Source": "https://www.binarly.io/advisories/brly-2022-123"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "99e00b3febba1763a7ff3f1eb043872506a00032ea2166b3611c041f8e56a3bb",
+    "Id": "CVE-2023-28032",
+    "Source": "https://www.binarly.io/advisories/brly-2022-124"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "b41bc6da0050201e654c226c08eb6eccbdc5c3a2595093a06b085bd777883a64",
+    "Id": "CVE-2023-28031",
+    "Source": "https://www.binarly.io/advisories/brly-2022-123"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "b41bc6da0050201e654c226c08eb6eccbdc5c3a2595093a06b085bd777883a64",
+    "Id": "CVE-2023-28032",
+    "Source": "https://www.binarly.io/advisories/brly-2022-124"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "53c72f110491b5bee302e898da8f9497d8e15ad037590c31fa4d709169158773",
+    "Id": "CVE-2023-28040",
+    "Source": "https://www.binarly.io/advisories/brly-2022-127"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "99e00b3febba1763a7ff3f1eb043872506a00032ea2166b3611c041f8e56a3bb",
+    "Id": "CVE-2023-28040",
+    "Source": "https://www.binarly.io/advisories/brly-2022-127"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "53c72f110491b5bee302e898da8f9497d8e15ad037590c31fa4d709169158773",
+    "Id": "CVE-2023-34469",
+    "Source": "https://www.binarly.io/advisories/brly-2022-126"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "99e00b3febba1763a7ff3f1eb043872506a00032ea2166b3611c041f8e56a3bb",
+    "Id": "CVE-2023-32466",
+    "Source": "https://www.binarly.io/advisories/brly-2022-065"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "52fbfe822173bdecbaa527df3f4270c7327db85fcf2d5a1779cb82c9b2a28c45",
+    "Id": "CVE-2023-28029",
+    "Source": "https://www.binarly.io/advisories/brly-2022-121"
+  },
+  {
+    "FileGuid": "899407d7-99fe-43d8-9a21-79ec328cac21",
+    "Sha256": "3899216b9855aef3687f707e1b9e20a9843966c3e3b42af0e0ecd51617418a22",
+    "Id": "CVE-2023-22449",
+    "Source": "https://www.binarly.io/advisories/brly-2022-038"
+  }
+]

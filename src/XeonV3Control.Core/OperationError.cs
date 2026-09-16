@@ -1,0 +1,78 @@
+namespace XeonV3Control.Core;
+
+/// <summary>Stable error identifiers shared by domain, platform and localization layers.</summary>
+public static class OperationError
+{
+    public const string AdministratorRequired = nameof(AdministratorRequired);
+    public const string PlatformUnsupported = nameof(PlatformUnsupported);
+    public const string DescriptorUnavailable = nameof(DescriptorUnavailable);
+    public const string SpiBusy = nameof(SpiBusy);
+    public const string ReadProtected = nameof(ReadProtected);
+    public const string SpiTimeout = nameof(SpiTimeout);
+    public const string SpiCycleError = nameof(SpiCycleError);
+    public const string ReadUnavailable = nameof(ReadUnavailable);
+    public const string WriteProtected = nameof(WriteProtected);
+    public const string FlashProtectionStateChanged = nameof(FlashProtectionStateChanged);
+    public const string FlashEraseSizeUnsupported = nameof(FlashEraseSizeUnsupported);
+    public const string FlashSmmWriteProtectionEnabled = nameof(FlashSmmWriteProtectionEnabled);
+    public const string FlashBiosWriteEnableUnavailable = nameof(FlashBiosWriteEnableUnavailable);
+    public const string FlashBiosWriteRestoreFailed = nameof(FlashBiosWriteRestoreFailed);
+    public const string FlashLayoutMismatch = nameof(FlashLayoutMismatch);
+    public const string FlashIdentityMismatch = nameof(FlashIdentityMismatch);
+    public const string FlashSourceChanged = nameof(FlashSourceChanged);
+    public const string FlashVerifyFailed = nameof(FlashVerifyFailed);
+    public const string TpmDebugDriverUnsafeVersion = nameof(TpmDebugDriverUnsafeVersion);
+    public const string PersonalizationUnsupported = nameof(PersonalizationUnsupported);
+    public const string PersonalizationSourceChanged = nameof(PersonalizationSourceChanged);
+    public const string PersonalizationOutputInvalid = nameof(PersonalizationOutputInvalid);
+    public const string PersonalizationSpace = nameof(PersonalizationSpace);
+    public const string PersonalizationInvalidBmp = nameof(PersonalizationInvalidBmp);
+    public const string PersonalizationInvalidImage = nameof(PersonalizationInvalidImage);
+    public const string PersonalizationBmpFormatMismatch = nameof(PersonalizationBmpFormatMismatch);
+    public const string PersonalizationBeeperUnsupported = nameof(PersonalizationBeeperUnsupported);
+    public const string PersonalizationBeeperAlreadySet = nameof(PersonalizationBeeperAlreadySet);
+    public const string DumpMismatch = nameof(DumpMismatch);
+    public const string DumpInvalid = nameof(DumpInvalid);
+    public const string UnsupportedSecureBootLayout = nameof(UnsupportedSecureBootLayout);
+    public const string CertificatesCurrent = nameof(CertificatesCurrent);
+    public const string TestKeyNotFound = nameof(TestKeyNotFound);
+    public const string TestKeyRemovalUnsupported = nameof(TestKeyRemovalUnsupported);
+    public const string UnsafePlatformKeyRemovalUnsupported = nameof(UnsafePlatformKeyRemovalUnsupported);
+    public const string CertificateVerification = nameof(CertificateVerification);
+    public const string OutputVerification = nameof(OutputVerification);
+    public const string SecureBootSpace = nameof(SecureBootSpace);
+    public const string DriverHash = nameof(DriverHash);
+    public const string DriverSignature = nameof(DriverSignature);
+    public const string DriverResponse = nameof(DriverResponse);
+    public const string DriverService = nameof(DriverService);
+    public const string RegisterDenied = nameof(RegisterDenied);
+    public const string IntegrityManifest = nameof(IntegrityManifest);
+    public const string CertificateCatalog = nameof(CertificateCatalog);
+    public const string CertificateHash = nameof(CertificateHash);
+    public const string FirmwareMarkerCatalog = nameof(FirmwareMarkerCatalog);
+    public const string UefiDriverCatalog = nameof(UefiDriverCatalog);
+    public const string UefiDriverUpdateCatalog = nameof(UefiDriverUpdateCatalog);
+    public const string UefiDriverUpdateUnsupported = nameof(UefiDriverUpdateUnsupported);
+    public const string UefiDriverUpdateSourceChanged = nameof(UefiDriverUpdateSourceChanged);
+    public const string UefiDriverUpdateOutputInvalid = nameof(UefiDriverUpdateOutputInvalid);
+    public const string TurboUnlockCatalog = nameof(TurboUnlockCatalog);
+    public const string CpuPatchRemovalUnsupported = nameof(CpuPatchRemovalUnsupported);
+    public const string CpuPatchSourceChanged = nameof(CpuPatchSourceChanged);
+    public const string CpuPatchOutputInvalid = nameof(CpuPatchOutputInvalid);
+    public const string TurboBoostForeignRemovalUnsupported = nameof(TurboBoostForeignRemovalUnsupported);
+    public const string TurboBoostForeignSourceChanged = nameof(TurboBoostForeignSourceChanged);
+    public const string TurboBoostForeignOutputInvalid = nameof(TurboBoostForeignOutputInvalid);
+    public const string LocalizationResource = nameof(LocalizationResource);
+    public const string SettingsStorage = nameof(SettingsStorage);
+    public const string TemporaryStorage = nameof(TemporaryStorage);
+    public const string CompressedSectionTruncated = nameof(CompressedSectionTruncated);
+    public const string DropSingleFile = nameof(DropSingleFile);
+    public const string UnsupportedFileType = nameof(UnsupportedFileType);
+    public const string PackageUnreadable = nameof(PackageUnreadable);
+    public const string PackageNoBiosImage = nameof(PackageNoBiosImage);
+    public const string PackageLimits = nameof(PackageLimits);
+    public const string ImageUnavailable = nameof(ImageUnavailable);
+    public const string StaApartmentRequired = nameof(StaApartmentRequired);
+    public const string UiDispatcherUnavailable = nameof(UiDispatcherUnavailable);
+}
+

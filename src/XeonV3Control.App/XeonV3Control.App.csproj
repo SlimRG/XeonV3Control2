@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.22000.0</TargetPlatformMinVersion>
+    <SupportedOSPlatformVersion>10.0.22000.0</SupportedOSPlatformVersion>
+    <UseWinUI>true</UseWinUI>
+    <DefineConstants>$(DefineConstants);DISABLE_XAML_GENERATED_MAIN</DefineConstants>
+    <WindowsPackageType>None</WindowsPackageType>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <WindowsAppSDKDeploymentManagerInitialize>false</WindowsAppSDKDeploymentManagerInitialize>
+    <SelfContained>true</SelfContained>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <AssemblyName>XeonV3Control2</AssemblyName>
+    <ApplicationIcon>Assets/XeonV3Control.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PublishTrimmed>false</PublishTrimmed>
+    <PublishSingleFile>true</PublishSingleFile>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <ReleaseMaximumExecutableMiB>384</ReleaseMaximumExecutableMiB>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+  </PropertyGroup>
+  <Target Name="RequireAdministratorInSelfContainedManifest"
+          AfterTargets="CreateWinRTRegistration"
+          BeforeTargets="CoreCompile"
+          Condition="'$(WindowsAppSDKSelfContained)' == 'true' and Exists('$(ApplicationManifest)')">
+    <PropertyGroup>
+      <ManifestNamespaces>&lt;Namespace Prefix='asmv1' Uri='urn:schemas-microsoft-com:asm.v1' /&gt;&lt;Namespace Prefix='asmv3' Uri='urn:schemas-microsoft-com:asm.v3' /&gt;</ManifestNamespaces>
+      <ExecutionLevelQuery>/asmv1:assembly/asmv3:trustInfo/asmv3:security/asmv3:requestedPrivileges/asmv3:requestedExecutionLevel/@level</ExecutionLevelQuery>
+    </PropertyGroup>
+    <XmlPoke XmlInputPath="$(ApplicationManifest)"
+             Query="$(ExecutionLevelQuery)"
+             Value="requireAdministrator"
+             Namespaces="$(ManifestNamespaces)" />
+    <XmlPeek XmlInputPath="$(ApplicationManifest)"
+             Query="$(ExecutionLevelQuery)"
+             Namespaces="$(ManifestNamespaces)">
+      <Output TaskParameter="Result" ItemName="GeneratedExecutionLevel" />
+    </XmlPeek>
+    <Error Condition="'@(GeneratedExecutionLevel)' != 'requireAdministrator'"
+           Text="The generated application manifest must require administrator privileges." />
+  </Target>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets/XeonV3Control.ico" LogicalName="XeonV3Control.window-icon" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" />
+    <PackageReference Include="System.IO.FileSystem.AccessControl" />
+    <ProjectReference Include="../XeonV3Control.Core/XeonV3Control.Core.csproj" />
+    <EmbeddedResource Include="../../third_party/ThrottleStop/ThrottleStop_x64.sys" LogicalName="ThrottleStop.driver" />
+    <EmbeddedResource Include="../../third_party/ThrottleStop/integrity.json" LogicalName="ThrottleStop.integrity.json" />
+  </ItemGroup>
+</Project>
+

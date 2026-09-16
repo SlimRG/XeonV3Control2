@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization/*.json" />
+    <EmbeddedResource Include="Certificates/*" />
+    <EmbeddedResource Include="Firmware/*.json" />
+    <EmbeddedResource Include="Firmware/DriverUpdates/*.ffs" />
+    <EmbeddedResource Include="Firmware/TpmDebug/*.ffs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SharpCompress" />
+  </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>XeonV3Control.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+</Project>

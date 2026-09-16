@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.22000.0</SupportedOSPlatformVersion>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PlatformTarget>x64</PlatformTarget>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/XeonV3Control.Core/XeonV3Control.Core.csproj" />
+    <Compile Include="../../src/XeonV3Control.App/ApplicationIdentity.cs" Link="ApplicationIdentity.cs" />
+    <Compile Include="../../src/XeonV3Control.App/AppLog.cs" Link="AppLog.cs" />
+    <Compile Include="../../src/XeonV3Control.App/Hardware/ThrottleStopDriverAuthenticity.cs" Link="ThrottleStopDriverAuthenticity.cs" />
+    <Compile Include="../../src/XeonV3Control.App/Hardware/KernelDriverService.cs" Link="KernelDriverService.cs" />
+    <Compile Include="../../src/XeonV3Control.App/Hardware/WindowsServiceInterop.cs" Link="WindowsServiceInterop.cs" />
+    <Compile Include="../../src/XeonV3Control.App/Hardware/ThrottleStopDriver.cs" Link="ThrottleStopDriver.cs" />
+    <EmbeddedResource Include="../../third_party/ThrottleStop/ThrottleStop_x64.sys" LogicalName="ThrottleStop.driver" />
+    <EmbeddedResource Include="../../third_party/ThrottleStop/integrity.json" LogicalName="ThrottleStop.integrity.json" />
+  </ItemGroup>
+</Project>

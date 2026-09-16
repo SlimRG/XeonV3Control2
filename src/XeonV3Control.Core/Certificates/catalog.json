@@ -1,0 +1,26 @@
+[
+  {
+    "File": "microsoft-corporation-kek-2k-ca-2023.der",
+    "Role": "KEK",
+    "Sha256": "3CD3F0309EDAE228767A976DD40D9F4AFFC4FBD5218F2E8CC3C9DD97E8AC6F9D",
+    "Modern": true
+  },
+  {
+    "File": "microsoft-option-rom-uefi-ca-2023.der",
+    "Role": "db",
+    "Sha256": "E5BE3E64C6E66A281457ECDECE0D6D0787577AAD2A3A0144262C10C14BA8D8F1",
+    "Modern": true
+  },
+  {
+    "File": "microsoft-uefi-ca-2023.der",
+    "Role": "db",
+    "Sha256": "F6124E34125BEE3FE6D79A574EAA7B91C0E7BD9D929C1A321178EFD611DAD901",
+    "Modern": true
+  },
+  {
+    "File": "windows-uefi-ca-2023.der",
+    "Role": "db",
+    "Sha256": "076F1FEA90AC29155EBF77C17682F75F1FDD1BE196DA302DC8461E350A9AE330",
+    "Modern": true
+  }
+]

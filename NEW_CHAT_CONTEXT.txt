@@ -1,0 +1,97 @@
+Project: XeonV3Control2 / XEON Slim
+Current handoff state: 2026-09-10
+
+Goal
+- Safe managed analysis/modification of X99/LGA2011-3 BIOS images for Xeon E5-v3.
+- Work ONLY with the loaded/dumped firmware image after acquisition. Do not use current Windows/SMBIOS data as a fallback for BIOS/board information.
+
+Environment / validation
+- Assistant environment has NO .NET SDK/runtime. Never install/use/suggest dotnet here.
+- Validate statically only. User runs Build-Release.ps1 locally and sends compiler/test/runtime errors.
+- Before every substantial new stage create a checkpoint ZIP.
+- No MMTool/UEFITool/external Python/native helper/runtime firmware tools inside the app.
+
+Current UI requirements
+- Drag & Drop is ONLY on the Source BIOS page.
+- File type filters belong inside the system file-picker dialog, not as a ComboBox on the page.
+- Secure Boot/TurboBoost/CPU Patch mutations start immediately after button click; no extra confirmation dialogs.
+- Long internal-policy notices are not shown to the user.
+- BIOS Information must show, from the IMAGE only:
+  BIOS -> Manufacturer / Version / Release date
+  System board -> Manufacturer / Name / Version / Serial number
+  If a value cannot be proven from the image, show Unavailable.
+- BIOS Information -> TurboBoost Unlock order:
+  1) Status
+  2) Microcode removal status
+  3) remaining diagnostics.
+
+TurboBoost / Foreign Unlock policy
+- retainedFamilies is EMPTY.
+- ser8989-turbohack and all other known unlock families are Foreign.
+- Confirmed Foreign modules may be removed directly WITHOUT a clean baseline.
+- GUID/name/single string alone never authorizes mutation.
+- Exact source-bound FFS is re-authorized immediately before mutation.
+- Unclassified/heuristic candidates are NEVER auto-modified.
+- No bulk Foreign removal.
+- Direct removal is exact PI FFS state transition DataValid -> Deleted, normally one state byte only.
+- CPU Patch is CPUID 0x000306F2 + Platform Flags 0x6F; Foreign cleanup must not restore/remove it.
+- RestoreBaselineFfs remains a separate blocked/future path.
+
+Nalex/UPT fixture
+- stock: tests/8DPV11.bin
+- Nalex UPT: tests/TurboUnlock/ForeignCleanup/8DPV11_nalex_upt.bin
+- UPT image SHA256: 5342AD0738155EE32FF546E62335FCFF6311A98329553A4AA7C927A959C2E293
+- Nalex exact FFS:
+  family nalex-upt
+  GUID 9C81BC4D-A8F5-4D3D-BB75-5AA2E934A034
+  FV 0x890000
+  FFS 0x8C9AE8
+  size 2347
+  FFS SHA256 9068ED21C0BE8524D5B554307D49EA4D44F647CC700FF0D706F477D8BF784D5A
+  state byte 0x8C9AFF: F8 -> E8
+- Expected direct-cleanup image SHA256:
+  E81AD0CE6B83E7413048D3AF9D1349382E91A4BBD16476D0961BC3DE7D35DE57
+- Nalex cleanup must preserve other UPT/ReBar changes, microcodes and CPU Patch state.
+
+UEFI driver update architecture
+- UI shows total detected UEFI driver inventory separately from the smaller verified update/restriction catalog.
+- Ready + CanApply gets an Update button; UpToDate shows Current; blocked/review-only remains non-executable.
+- No bulk update and no blind update by GUID.
+- Exact SHA -> SHA transitions are data-driven in x99-driver-updates.json.
+- Managed physical strategies:
+  InPlace
+  GrowIntoAdjacentFreeSpace
+  RebuildFirmwareVolume
+  RequiresRebase
+  Unsupported
+- FV rebuild keeps the same FV bounds/length and preserves unrelated content.
+- Strict PE32/PE32+ XIP rebasing is supported only for provable pure PEIM cases with valid relocations.
+- TE, SEC/PEI Core, combined PEIM/DXE, compressed/guided/ambiguous PEI, fixed/VTF/unknown movement remain fail-closed.
+- Intel RST/RSTe exact transitions are implemented; RSTe 4.6.0.1018 -> 5.5.5.1005 is AutomaticManaged when the physical planner proves it safe.
+- Intel LAN/NVMe/Realtek/Marvell/ASMedia etc. must not be auto-updated without exact compatibility authorization.
+
+Firmware identity
+- FirmwareImageIdentityInspector extracts identity from firmware bytes.
+- For 8DPV11 family:
+  BIOS manufacturer: American Megatrends, Inc.
+  BIOS version: X9F8P Ver:003
+  BIOS date: 09/06/2022
+  board mapping: X9F8P -> Huananzhi X99-F8D Plus
+- Board mapping is data-driven in firmware-board-identities.json.
+- Do NOT query Windows SMBIOS/registry after a dump is loaded.
+
+Recent test/build status
+- The user previously got 183 tests: 180 passed, 3 failed.
+- Those 3 were addressed:
+  * RST/RSTe post-update version assertions now validate X99 catalog state instead of generic UefiDriverInfo.Version when VERSION section is absent.
+  * synthetic XIP PE fixture is cleared before constructing headers so IMAGE_FILE_RELOCS_STRIPPED is not accidentally set.
+- After that, additional UI/image-only information changes were made.
+- IMPORTANT: the current final handoff has only static validation in the assistant environment; user should run scripts/Build-Release.ps1 locally and send the next full log if anything fails.
+
+Engineering rules
+- Correctness/security/data integrity first.
+- Production-grade architecture; SOLID/DRY/KISS; no hardcoded machine assumptions or duplicate sources of truth.
+- Fail closed on ambiguous firmware structure.
+- Preserve unrelated bytes/FFS/microcodes whenever possible and verify postconditions after mutation.
+- RU/EN/UA/ZH localization must stay synchronized.
+- Keep docs short and useful.

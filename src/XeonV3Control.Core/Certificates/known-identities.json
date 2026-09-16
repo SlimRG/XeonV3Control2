@@ -1,0 +1,44 @@
+[
+  {
+    "Sha256": "A1117F516A32CEFCBA3F2D1ACE10A87972FD6BBE8FE0D0B996E09E65D802A503",
+    "OfficialMicrosoft": true,
+    "Modern": false,
+    "TestKey": false,
+    "Dangerous": false
+  },
+  {
+    "Sha256": "48E99B991F57FC52F76149599BFF0A58C47154229B9F8D603AC40D3500248507",
+    "OfficialMicrosoft": true,
+    "Modern": false,
+    "TestKey": false,
+    "Dangerous": false
+  },
+  {
+    "Sha256": "E8E95F0733A55E8BAD7BE0A1413EE23C51FCEA64B3C8FA6A786935FDDCC71961",
+    "OfficialMicrosoft": true,
+    "Modern": false,
+    "TestKey": false,
+    "Dangerous": false
+  },
+  {
+    "Sha256": "CCA4E3F3170230030DC3E33D1E3FA7D1383DE8B3367430892E93CBCCDE034CE0",
+    "OfficialMicrosoft": false,
+    "Modern": false,
+    "TestKey": true,
+    "Dangerous": true
+  },
+  {
+    "Sha256": "617F9A3582DE92B19A14BF45CD7041950F365B1E49BAC2633FD02BB106902C8D",
+    "OfficialMicrosoft": false,
+    "Modern": false,
+    "TestKey": true,
+    "Dangerous": true
+  },
+  {
+    "Sha256": "28F8AAADBCE1D50D7AB10FDCDB8DCBD619E1929D4BAEE9404CC068F8D8E47095",
+    "OfficialMicrosoft": false,
+    "Modern": false,
+    "TestKey": false,
+    "Dangerous": true
+  }
+]

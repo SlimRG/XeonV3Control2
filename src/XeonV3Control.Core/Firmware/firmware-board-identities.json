@@ -1,0 +1,11 @@
+{
+  "SchemaVersion": 1,
+  "Boards": [
+    {
+      "BiosIdPrefix": "X9F8P",
+      "Manufacturer": "Huananzhi",
+      "Name": "X99-F8D Plus",
+      "Version": null
+    }
+  ]
+}

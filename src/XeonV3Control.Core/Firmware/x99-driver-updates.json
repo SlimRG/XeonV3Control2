@@ -1,0 +1,226 @@
+{
+  "SchemaVersion": 1,
+  "Candidates": [
+    {
+      "Id": "intel-rst-14.8.0.2377",
+      "Component": "Intel RST RAID EFI",
+      "Branch": "RST",
+      "Version": "14.8.0.2377",
+      "FileGuid": "91b4d9c1-141c-4824-8d02-3c298e36eb3f",
+      "ResourceFile": "intel-rst-14.8.0.2377.ffs",
+      "Sha256": "9AE78E96A20D5A95EA616C51B2A4CF93CFE42FAA13FB94F19F3982D2AEAC8872",
+      "Size": 87793
+    },
+    {
+      "Id": "intel-rste-5.5.5.1005",
+      "Component": "Intel RSTe SATA EFI",
+      "Branch": "RSTe",
+      "Version": "5.5.5.1005",
+      "FileGuid": "91b4d9c1-141c-4824-8d02-3c298e36eb3f",
+      "ResourceFile": "intel-rste-5.5.5.1005.ffs",
+      "Sha256": "975764C0A94A14DD476A53CEF2B999555CD49E43FDC4B29D1AB153577F215CB7",
+      "Size": 104067
+    }
+  ],
+  "Transitions": [
+    {
+      "Id": "intel-rst-13.1-to-14.8",
+      "Component": "Intel RST RAID EFI",
+      "Branch": "RST",
+      "FileGuid": "91b4d9c1-141c-4824-8d02-3c298e36eb3f",
+      "SourceVersion": "13.1.0.2126",
+      "SourceSha256": "617FD0393E63B3F20DC1D65AE1DCA0DCEA1A7E23E9EA1929196F9F42B0CDA9DD",
+      "CandidateId": "intel-rst-14.8.0.2377",
+      "Policy": "AutomaticManaged",
+      "AllowedGenericReviewReasons": [
+        "VersionNotComparable"
+      ]
+    },
+    {
+      "Id": "intel-rst-13.2-to-14.8",
+      "Component": "Intel RST RAID EFI",
+      "Branch": "RST",
+      "FileGuid": "91b4d9c1-141c-4824-8d02-3c298e36eb3f",
+      "SourceVersion": "13.2.0.2134",
+      "SourceSha256": "A1C3152A1CD42466436A89113597C86A9BC64CAF6F8B0E148818CF39E2D47B93",
+      "CandidateId": "intel-rst-14.8.0.2377",
+      "Policy": "AutomaticManaged",
+      "AllowedGenericReviewReasons": [
+        "VersionNotComparable"
+      ]
+    },
+    {
+      "Id": "intel-rste-4.6-to-5.5.5",
+      "Component": "Intel RSTe SATA EFI",
+      "Branch": "RSTe",
+      "FileGuid": "91b4d9c1-141c-4824-8d02-3c298e36eb3f",
+      "SourceVersion": "4.6.0.1018",
+      "SourceSha256": "AC79D07165FF6FC9BDCDDE8CC1FB11293DB58D396FBBC63CAFFCD0AA82E9FAD4",
+      "CandidateId": "intel-rste-5.5.5.1005",
+      "Policy": "AutomaticManaged",
+      "AllowedGenericReviewReasons": [
+        "VersionNotComparable",
+        "ExecutableLayoutChanged",
+        "RepackRequired"
+      ]
+    }
+  ],
+  "RestrictedComponents": [
+    {
+      "Id": "intel-lan-1gbe-undi",
+      "Component": "Intel 1GbE UNDI",
+      "FileGuid": "4953f720-006d-41f5-990d-0ac7742abb60",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "intel-lan-dxe",
+      "Component": "Intel LAN DXE",
+      "FileGuid": "3316a5d0-fe16-40e2-8114-75e5724449f8",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "intel-lan-uefi",
+      "Component": "Intel LAN UEFI Driver",
+      "FileGuid": "9006872d-3a86-4bae-a2f0-e527b9d7119e",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "intel-lan-x540-family",
+      "Component": "Intel X540 LAN UEFI Driver",
+      "FileGuid": "eb53fcad-3071-4bab-980c-6e4a379255f3",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "intel-lan-i210",
+      "Component": "Intel I210 LAN UEFI Driver",
+      "FileGuid": "a92906c0-6492-4ca8-a653-52cd14599b05",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "intel-lan-i350",
+      "Component": "Intel I350 LAN UEFI Driver",
+      "FileGuid": "60820635-3c6b-418e-9188-f85d1c5ff340",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "intel-lan-x540",
+      "Component": "Intel X540 LAN UEFI Driver",
+      "FileGuid": "5011b90a-2b4e-46e3-a4d1-3191102dbc9b",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "intel-lan-i211",
+      "Component": "Intel I211 LAN UEFI Driver",
+      "FileGuid": "48392194-d155-4567-9aaf-fa805baeec6c",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "intel-lan-secondary",
+      "Component": "Intel LAN UEFI Driver",
+      "FileGuid": "86cb2bf0-f3f0-4915-b2b1-de61c8c06941",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "realtek-undi-rtk",
+      "Component": "Realtek UNDI (RtkUndiDxe)",
+      "FileGuid": "32d4b2dd-1db3-4af9-91b0-fbae6e6ea259",
+      "Reason": "NoKnownUpgradeChain"
+    },
+    {
+      "Id": "realtek-undi-alt",
+      "Component": "Realtek UNDI",
+      "FileGuid": "2851e234-20fd-4d1e-9041-dcb8f3025cae",
+      "Reason": "NoKnownUpgradeChain"
+    },
+    {
+      "Id": "realtek-lan-undi",
+      "Component": "Realtek UNDI",
+      "FileGuid": "2eaa04aa-5eed-4c27-b9ee-26916ec25a8f",
+      "Reason": "NoKnownUpgradeChain"
+    },
+    {
+      "Id": "ami-nvme",
+      "Component": "AMI NVMe DXE",
+      "FileGuid": "634e8db5-c432-43be-a653-9ca2922cc458",
+      "Reason": "BundleAuthorizationRequired"
+    },
+    {
+      "Id": "ami-nvme-int13",
+      "Component": "AMI NVMe Int13",
+      "FileGuid": "c9a6de36-fdff-4faf-8343-85d9e3470f43",
+      "Reason": "BundleAuthorizationRequired"
+    },
+    {
+      "Id": "ami-nvme-dynamic-setup",
+      "Component": "AMI NVMe Dynamic Setup",
+      "FileGuid": "668706b2-bcfc-4ad4-a185-75e79f3fe169",
+      "Reason": "BundleAuthorizationRequired"
+    },
+    {
+      "Id": "marvell-9172-dxe",
+      "Component": "Marvell 91xx/9172 DXE",
+      "FileGuid": "2a2ee799-6b11-4a8e-a993-cb2d127c9067",
+      "Reason": "NoKnownUpgradeChain"
+    },
+    {
+      "Id": "marvell-9172-ahci",
+      "Component": "Marvell 9172 AHCI",
+      "FileGuid": "85794f12-c3f3-466e-9726-30dc23ac3e02",
+      "Reason": "NoKnownUpgradeChain"
+    },
+    {
+      "Id": "marvell-9172-raid",
+      "Component": "Marvell 9172 RAID",
+      "FileGuid": "afeb3166-a607-4a8a-bf11-77e67ae84ca4",
+      "Reason": "NoKnownUpgradeChain"
+    },
+    {
+      "Id": "asmedia-asm1061",
+      "Component": "ASMedia ASM1061 DXE",
+      "FileGuid": "a05f5c06-1782-48aa-962a-86a0892022b6",
+      "Reason": "NoKnownUpgradeChain"
+    },
+    {
+      "Id": "asmedia-asm106x",
+      "Component": "ASMedia ASM106x DXE",
+      "FileGuid": "238505cf-3331-4582-8cb7-b7c6be888e2f",
+      "Reason": "NoKnownUpgradeChain"
+    },
+    {
+      "Id": "asmedia-asm106x-init",
+      "Component": "ASMedia ASM106x Init DXE",
+      "FileGuid": "47b9e36f-9300-4be2-b749-e0f34f3cd4ee",
+      "Reason": "NoKnownUpgradeChain"
+    },
+    {
+      "Id": "atheros-lan-uefi",
+      "Component": "Atheros LAN UEFI Driver",
+      "FileGuid": "e0b5a13b-3abf-4724-a650-b72eb4f7f68e",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "atheros-lan-driver",
+      "Component": "Atheros LAN Driver",
+      "FileGuid": "e730cf73-bb99-42bf-bcb1-11786c3d25ad",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "killer-lan-uefi",
+      "Component": "Killer LAN UEFI Driver",
+      "FileGuid": "93761039-4c9a-42fe-ae98-5dd5652f931e",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "killer-lan-driver",
+      "Component": "Killer LAN Driver",
+      "FileGuid": "c101a46d-7487-45e8-8743-c7d2f4648a17",
+      "Reason": "HardwareAuthorizationRequired"
+    },
+    {
+      "Id": "generic-raid-driver",
+      "Component": "OEM RAID Driver",
+      "FileGuid": "793ba4eb-a6e9-4526-996d-79393f51b443",
+      "Reason": "NoKnownUpgradeChain"
+    }
+  ]
+}
